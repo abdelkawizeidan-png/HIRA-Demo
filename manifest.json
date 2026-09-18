@@ -1,14 +1,14 @@
 {
   "name": "HIRA",
   "short_name": "HIRA",
-  "description": "HIRA — HR Projects Operations Command Center for Veltrix Power Group: organization chart, KPI tracker, Live Dashboard, Biweekly Reports and Mobilization Tracker.",
+  "description": "HIRA — HR Projects Operations Command Center for Eon Business Hub: organization chart, KPI tracker, Live Dashboard, Biweekly Reports and Mobilization Tracker.",
   "id": "hira-hr-command-center-demo",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#0b2e3d",
-  "theme_color": "#0b2e3d",
+  "background_color": "#0d0d0d",
+  "theme_color": "#0d0d0d",
   "lang": "en",
   "icons": [
     { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
