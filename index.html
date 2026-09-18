@@ -166,7 +166,8 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 .brand-mark{font-weight:800; letter-spacing:.5px; line-height:1.05;}
 .brand-mark .l1{font-size:14.5px; color:#fff;}
 .brand-mark .l2{font-size:14.5px; color:#fff;}
-.brand-underline{height:3px; width:60px; background:var(--red); border-radius:3px; margin-top:5px;}
+.brand-ring{width:26px; height:26px; border-radius:50%; border:2px solid var(--gold); position:relative; flex-shrink:0;}
+.brand-ring::after{content:''; position:absolute; top:50%; left:50%; width:6px; height:6px; margin:-3px 0 0 -3px; background:var(--gold-bright); border-radius:50%;}
 .title-block{flex:1; min-width:260px;}
 .title-block h1{font-size:20px; color:#fff; margin-bottom:3px; letter-spacing:-.015em; font-weight:700;}
 .title-block .sub{font-size:12.5px; color:#a7b4cf; letter-spacing:.005em;}
@@ -660,10 +661,10 @@ body.page-unlocked #pageLockGate{display:none;}
   animation:fadeRise var(--dur-3) var(--ease) both;}
 .lock-badge{width:52px; height:52px; margin:0 auto 16px; border-radius:50%; background:var(--blue-light); color:var(--blue-dark); display:flex; align-items:center; justify-content:center;}
 .lock-badge svg{width:24px; height:24px;}
-.lock-brand{margin-bottom:18px;}
+.lock-brand{margin-bottom:18px; display:flex; align-items:center; justify-content:center; gap:6px;}
 .lock-brand-l1, .lock-brand-l2{font-size:11px; font-weight:800; letter-spacing:.08em; color:var(--slate-500);}
-.lock-brand-l2{margin-left:5px;}
-.lock-brand-underline{height:2.5px; width:34px; background:var(--red); border-radius:3px; margin:6px auto 0;}
+.lock-brand-ring{width:16px; height:16px; border-radius:50%; border:1.5px solid var(--gold); position:relative; flex-shrink:0; display:inline-block;}
+.lock-brand-ring::after{content:''; position:absolute; top:50%; left:50%; width:4px; height:4px; margin:-2px 0 0 -2px; background:var(--gold-bright); border-radius:50%;}
 #pageLockGate .lock-screen h2{margin:0 0 2px; font-size:19px; color:var(--slate-900); text-wrap:balance;}
 .lock-sub{font-size:12.5px; font-weight:700; color:var(--blue-dark); margin:0 0 14px;}
 #pageLockGate .desc{color:var(--slate-500); font-size:12.8px; line-height:1.55; margin:0 0 20px;}
@@ -1250,8 +1251,7 @@ html[data-theme="dark"] .section-tag{
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6.5V11c0 4.8 3.3 9.3 8 10.5 4.7-1.2 8-5.7 8-10.5V6.5L12 3Z"/><path d="m9 12 2 2 4-4"/></svg>
     </div>
     <div class="lock-brand">
-      <span class="lock-brand-l1">EON</span><span class="lock-brand-l2">BUSINESS HUB</span>
-      <div class="lock-brand-underline"></div>
+      <span class="lock-brand-ring" aria-hidden="true"></span><span class="lock-brand-l1">EON</span><span class="lock-brand-l2">BUSINESS HUB</span>
     </div>
     <h2>HR Projects Operations</h2>
     <p class="lock-sub">Command Center — secure access</p>
@@ -1273,10 +1273,10 @@ html[data-theme="dark"] .section-tag{
 <div class="topbar">
   <div class="topbar-inner">
     <div class="brand">
+      <div class="brand-ring" aria-hidden="true"></div>
       <div class="brand-mark">
         <div class="l1">EON</div>
         <div class="l2">BUSINESS HUB</div>
-        <div class="brand-underline"></div>
       </div>
     </div>
     <div class="title-block">
